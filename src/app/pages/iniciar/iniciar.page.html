@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>Inciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    <img src="assets/icon/iniciar.png">
+  </ion-card-header>
+  <ion-card-subtitle text-center>
+    <h2>Por favor ingrese sus credenciales</h2>
+  </ion-card-subtitle>
+  
+  <form (ngSubmit)="logForm()">
+     <ion-item>
+      <ion-icon name="at" slot="start"></ion-icon>
+      <ion-grid>
+        <ion-row>
+        <ion-label>Email: </ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-input type="email" [(ngModel)]="username" name="email"></ion-input>
+        </ion-row>
+        </ion-grid>   
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="bulb" slot="start"></ion-icon>
+        <ion-grid>
+        <ion-row>
+        <ion-label>Contraseña: </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-input type="password" [(ngModel)]="password" name="cont"></ion-input>
+      </ion-row>
+    </ion-grid>
+      </ion-item>
+
+ <ion-button expand="block" (click)="ingresar()">Ingresar</ion-button>
+    </form>
+</ion-card>
+</ion-content>

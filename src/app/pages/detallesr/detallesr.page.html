@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Restaurante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle text-center><h1>{{re.name}}</h1></ion-card-subtitle>
+    <img [src]="re.imagen">
+  </ion-card-header>
+</ion-card>
+<ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+    <H3>Calificación</H3>
+  </ion-col>
+  <ion-col>
+    <form>
+  <h1 class="clasificacion">
+    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+    --><label id="s" for="radio1">★</label><!--
+    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+    --><label id="s" for="radio2">★</label><!--
+    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+    --><label id="s" for="radio3">★</label><!--
+    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+    --><label id="s" for="radio4">★</label><!--
+    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+    --><label id="s" for="radio5">★</label>
+  </h1>
+</form>
+</ion-col>
+</ion-row>
+  </ion-grid>
+</ion-card>
+<ion-card>
+	<ion-card-subtitle text-center><h4>PLATOS</h4></ion-card-subtitle>
+	<ion-list>
+<ion-item *ngFor="let res of re.platos">
+    <!-- routerLink="/detail/{{cr.id}}" 
+   <ion-avatar slot="start"><img [src]="res.imagen"></ion-avatar>--> 
+   <ion-icon name="book" slot="start"></ion-icon>
+   <ion-label>
+<ion-grid>
+	<ion-row>
+    <ion-col size="3">
+     {{res.nplato}}
+    </ion-col>
+    <ion-col size="3" offset="5">
+     {{res.precio}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+      </ion-label>
+</ion-item>
+</ion-list>
+ </ion-card> 
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+  <ion-tab-bar slot="bottom" color="yellowBG">
+    <ion-tab-button (click)="viewMapa()">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Ubicación</ion-label>
+      </ion-tab-button>
+
+      </ion-tab-bar>
+</ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+</ion-content>

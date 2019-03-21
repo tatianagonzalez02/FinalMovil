@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-button (click)="salir()" slot="start">
+  Salir
+  </ion-button>
+    <ion-title text-center>Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+  <ion-img src="assets/icon/chef.gif"></ion-img>
+  <ion-card-content>
+    "Busque los restaurantes asociados, califiquelos, busquelos en el Mapa y lea el codigo QR,
+    para promociones.
+  </ion-card-content>
+  </ion-card>
+<ion-tabs>
+  <ion-tab-bar slot="bottom" color="yellowBG">
+    <ion-tab-button  (click)="viewQR()">
+      <ion-icon name="contacts"></ion-icon>
+      <ion-label>Codigo QR</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button  (click)="viewPerfil()">
+      <ion-icon name="contacts"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="viewRestaurantes()">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Restaurantes</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+</ion-content>
+
+
+
+    

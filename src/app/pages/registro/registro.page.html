@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>Registro Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    <img src="assets/icon/registro.jpg">
+  </ion-card-header>
+  <form (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-grid>
+          <ion-row><ion-label>Nombre: </ion-label></ion-row>
+       <ion-row> <ion-input type="text" [(ngModel)]="nombre" name="nom"></ion-input></ion-row>
+        </ion-grid>
+        </ion-item>
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-grid>
+        <ion-row><ion-label>Documento: </ion-label></ion-row>
+        <ion-row><ion-input type="number" [(ngModel)]="documento" name="doc"></ion-input></ion-row>
+        </ion-grid>
+       </ion-item>
+      <ion-item>
+        <ion-icon name="at" slot="start"></ion-icon>
+        <ion-grid>
+        <ion-row><ion-label>Email: </ion-label></ion-row>
+       <ion-row><ion-input type="email" [(ngModel)]="username" name="email"></ion-input></ion-row>
+       </ion-grid>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bulb" slot="start"></ion-icon>
+        <ion-grid>
+        <ion-row><ion-label>Contraseña: </ion-label></ion-row>
+        <ion-row><ion-input type="password" [(ngModel)]="password" name="cont"></ion-input></ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-button expand="block" href="iniciar" (click)="guardar()">Registrarse</ion-button>
+    </form>
+</ion-card>
+
+
+</ion-content>

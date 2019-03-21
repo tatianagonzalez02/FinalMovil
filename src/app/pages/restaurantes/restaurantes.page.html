@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Restaurantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+    <ion-item *ngFor="let r of resta">
+    <!-- routerLink="/detail/{{cr.id}}" --> 
+   <ion-avatar slot="start"><img [src]="r.imagen"></ion-avatar>
+   <ion-label (click)="openNavDetailsPage(r)" >
+      <h1>{{r.name}}</h1>
+      <p><b>Tipo Comida:</b> {{r.tipo}}</p>
+      <!-- <p><b>Dieta:</b> {{r.dieta}}</p>
+      <p><b>Peso:</b> {{r.peso}}</p> -->
+      </ion-label>
+            </ion-item>
+  </ion-list>
+</ion-content>
